@@ -1,0 +1,41 @@
+
+//////  APPUNTI GIT ///////
+
+$ //// Il primo step da fare e' quello di inizializzare una repository per farlo si utlizza GIT - init /////
+Dal momento che inviamo questo comando ogni modifica sara' tracciata e la cartella di progetto diventera' una repository $
+
+//// Con GIT - staging , git controllera' i file della repository e segnalera' quali sono quelli che sono stati modificati,
+rispetto all'ultimo stato e successivamente li memorizzera' nell'area di staging. ////
+
+$ //// con GIT - Commit , dopo aver inserito le modifiche effettuate nell'area di staging si dovra' creare un commit,
+Git a questo punto prendera' le informazioni dei file dall'area di staging e creera uno stato di progetto sulla linea temporale.
+Potremmo utilizzare questo commit come un punto di recupero e quindi sara' possibile tornare 
+allo stato del progetto al momento del commit in qualsisi momento. //// $
+
+//// fasi da seguire (GIT Workflow):
+ 1. Effettuare modifiche al codice.
+ 2. memorizzarle nell'area di staging con: git add.
+ 3. committarle nella repository con: git commit. ////
+
+ $ ///// Con Git - push sincronizzeremo i file locali su un server remoto ///// $ %%% Da locale li invieremo sulla repository di GitHub %%%% 
+
+%%%%%%%%%%%%%%% SET UP GITHUB %%%%%%%%%%%%%%%
+
+//// inanzitutto installiamo git ,successivamente creiamo un account su GitHub e creiamo una repository //////
+
+//// Per iniziare apriamo una nuova finestra dal terminale di VSCode ////
+
+$//// scriviamo git config --global user.name "UsernamediGithub" /////
+//// scriviamo git config --global user.email "EmaildiGithub" ///// $
+
+//// chiudiamo il terminale e andiamo nella sezione source control di VSCode ////
+
+//// inizializziamo la repository ////
+
+$//// vedremo tutti i file oggetto di modifica (la prima volta vedremo l'intero progetto) //// $
+
+//// cliccheremo sul simbolo "+" che equivale a creare l'area di staging ////
+
+//// cliccando poi sul simbolo fatto committeremo i file mandandoli su GitHub ////
+
+//// concluderemo l'operazione cliccando "publish changes" ////
