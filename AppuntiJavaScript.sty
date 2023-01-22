@@ -1,0 +1,184 @@
+
+//// APPUNTI JAVASCRIPT ////
+
+Attraverso JavaScript le pagine web diventano dinamiche
+perchè ci consente di accedere e modificare elementi html, reagire ad eventi generati dall'utente
+validare i dati inseriti dall'utente e interagire con i cookie
+ (determinare il browser utilizzato,la dimensioni del viewport e lavorare con i cookie)
+
+ $ Per inserire JavaScript dobbiamo creare un file esterno .js 
+ e collegarlo al file html inserendo un tag <script> alla fine del body (prima del tag </body>) $
+ con <script src="percorsocollegamentofile"></script>
+
+Con console.log("stringaTesto") mandiamo semplicemente un messaggio alla console (non alla pagina html)
+
+$ Le variabili vengono create con const(per le costanti) e let(per le variabili riassegnabili) ////$
+const NomeVariabile = "Hello";
+let NomeSecondaVariabile = "Ciao"; 
+////
+
+/// Le funzioni vengono riutilizzate ogni volta che si presenta la necessità senza dover ogni 
+volta riscrivere lo stesso pezzo di codice più volte nello stesso file ///
+$ per dichiarare la funzione usiamo:  function NomeFunzione() { blocco codice } $
+
+Le funzioni possono accettare dei parametri (detti argomenti) in ingresso che poi vengono eleborati dalla funzioni
+e restituiscono un risultato. $ function NomeFunzione (Argomento1, Argomento2) {
+ console.log(Argomento1 + Argomento2); } $
+
+ /// Per restituire il risultato di una funzione si utilizza la keyword return /// 
+ $ function NomeFunzione (Argomento1, Argomento2) {
+    let Risultato= Argomento1 + Argomento2; 
+    return Risultato } $
+
+ if (!condizione1){ blocco codice } %% se la condizione1 non sara' rispettata il codice verra eseguito %%
+
+
+ %%%%%%%%%%%%%%%% FUNZIONI DEL DOM %%%%%%%%%%%%%
+
+ /// Il DOM e' la rappresentazione ad albero della pagina HTML cioe' l'insieme di elementi che formano una pagina web
+ $ ///// Con la funzione .getElementById si ritrovano specifici elementi all'interno del DOM ////
+ % in HTML %
+ <div id="saluto">CIAO</div>
+ % in JS %
+ const element = document.getElementById("saluto"); $
+
+ /// Dopo aver recuperato un elemento a sua volta sono moltissime le operazioni che possiamo fare,
+ ad esempio: $
+    element.style ci permette di impostare le singole proprieta' CSS per elemento. /// nomeELemento.style.color = 'red';
+    element.addEventListener() aggancia una funzione che sara' chiamata quando accade un evento.
+    element.value si utilizza per ottenere il valore di un element, se ne ha uno.
+
+$ /// E' possibile inoltre scatenare degli eventi con JS come ad esempio rimanere in ascolto di un evento per esempio:
+% in HTML %
+<div id="saluto">CIAO</div>
+% in JS %
+const element = document.getElementById("saluto"); 
+element.addEventListener('click', function(){ blocco codice}) ///
+$ Quindi in questo caso verra' eseguita la funzione solamente quando l'elemento verra' cliccato
+La funzione puo' rimanere anonima dato che si attivera' sempre e comunque al momento del click $
+
+%%%%%%%%%%%%% VALIDAZIONI FORM %%%%%%%%%%%%%%%%%
+
+///// Inserendo l'attributo required in HTML indicheremo che quel campo del form e' un campo obbligatorio ////
+
+//// Inserendo il tag:   type="email" il browser capisce in automatico che in quel campo dovra' essere inserita un email ////
+
+//// Utilizzando l'attributo max-lenght="numero" noi impostiamo una lunghezza massima al testo
+ che gli utenti possono inserire in un determinato campo ////
+
+%%%%%%%%%% RICEZIONE DATI FORM %%%%%%%%%%%%%%%%%%%
+
+$ /////// Per ricevere i dati che gli utenti ci mandano ci affidiamo a netlify /////// $
+
+//// Per farlo dobbiamo inserire al tag: <form> l'attributo <form name="nome" netlify> ///////
+
+///// inoltre si dovra' inserire a ogni elemento della tabella un nome ///// <input class="classe" type="text" name="nome" ecc...>
+
+$ OVVIAMENTE PER UTILIZZARE QUESTO SERVIZIO BISOGNA HOSTARE IL SITO SU NETLIFY $
+
+
+%%%%%%%%% LA SINTASSI %%%%%%%%%%
+
+// Per dichiarare una variabile si puo utilizzare var, let e const (ultimamente si preferisce usare let e const) //
+
+// per effettuare le operazioni su JS basta semplicemente aggiungere un simbolo + - / *
+ mentre con ** eleviamo a un esponente e con "%" indichiamo il modulo (il resto dell'operazione)
+inoltre e' possibile effettuare operazioni anche su tipi di numeri diversi per esempio un float + int ecc... //
+
+$ con Math.floor(Math.random() * 10) + 1 si genera un numero casuale da 1 a 10.
+con Math.floor si arrotondera' per difetto, mentre con math.random si creera' un numero casuale da 0.1 a 0.9 $
+
+/// If, Else if ed else sono le istruzioni condizionali /// if (condizione){ blocco codice }  else{  blocco codice } ///
+Operatoli relazionali:
+ $ //// == uguale,  != diverso,  > maggiore, < minore, >= maggiore uguale, <=minore uguale //// $
+ 
+ //// Per unire più condizioni si utilizzano gli operatori logici: 
+ $ //// && indica il simbolo "and" quindi devono essere rispettate entrambi le condizioni //// $
+ if (condizione1 && condizione2){ blocco codice } 
+ $ //// || indica il simbolo "or" quindi deve essere rispettata una delle due condizioni //// $
+ if (condizione1 || condizione2){ blocco codice } 
+
+ //// Esiste anche l'operatore logico ! NOT (non unisce due condizioni)////
+
+ $ /// possiamo inoltre utilizzare switch (condizione) {
+     case condizione1: blocco codice; break
+     case condizione2: blocco codice; break
+     case condizione3: blocco codice; break
+     default: blocco codice % quindi se nessun caso viene rispettato elaborera' questo blocco 
+ } in alternativa a if ed else ///// $
+
+ //// per creare dei cicli usiamo while e for ////
+ for (let variabile; condizione; variabile++){blocco codice}
+ per while, while(condizione){blocco codice} % in questo caso bisogna dichiarare la varibile prima
+
+
+ ///Nota aggiuntiva: si utilizza generalmente per comodita' in presenza di array la keyword nomeArray.length 
+ questa keyword ci permette ci contare il numero di elementi all'interno dell'array in modo da non dover inserire
+ manualmente il punto di fermo del loop esempio: while(i < nomeArray.length) che equivale se la lunghezza
+ dell'array e' uguale a 10 a while(1 < 10). ////
+
+ $ //// si puo inoltre aggiungere come condizione gli elementi stessi di un array ad esempio:
+ for (const element of myNumbers){
+    if (element > 5 ){
+        myArrayLittleNumbers.push(element)
+    } else{
+        myArrayBigNumbers.push(element)
+    }
+} % in questo modo andremo a creare due array, uno contenente i numeri maggiori di 5, l'altro i minori
+% questa proprieta' viene quindi generalmente utilizzata per dividere, manipolare e utilizzare gli elementi di un'array
+
+///// Con Break diciamo praticamente al loop: fermati. mentre con Continue gli diciamo: continua saltando questa condizione
+esempio: for(let i=0; i<10; 1++){
+    if(i===5){
+        continue;
+    } % allora in questo caso visualizzera' tutti i numeri da 0 a 10 saltando il 5. Nel caso in 
+    %cui ci fosse break si fermerebbe invece al numero 5
+    console.log(i)
+} ////// $
+
+//// Possiamo utilizzare la keyword forEach ////
+myArray.forEach(function(number){
+    console.log(number)
+}) 
+$//// Oppure possiamo utilizzare map ////
+myArray.map(function(number){
+    return number * 2
+})$ % map pero' applica la funzione ad ogni singolo numero dell'array e restituisce un nuovo array
+
+//// Con filter possiamo applicare dei filtri ////
+const myConst = myArray.filter(function (number){
+    return number < 5
+}) 
+console.log(myConst) % avremo come risultato un array che comprende i numeri dell'array <5
+
+$ //// Con find cerchiamo un elemento all'interno di un array ////
+const myPerson = myArray.find(function (element){
+    return element === 5
+}) 
+console.log (myPerson) /////$
+
+//// Per tutti i metodi andare a vedere nella documentazione ufficiale di JavaScript /////
+
+//// Con setTimeout si va a "creare" delle attese esempio:
+
+function nomeFunzione() {
+setTimeout{() => {
+    console.log("called")
+    }, 3000}
+}  %% In questo caso il sito aspettera' 3 secondi prima di eseguire il codice %%%
+
+//////// Con CJS indichiamo il Common JavaScript in modo da collegare piu file js////////
+esempio:   const {nome} = require("./nomeSecondoFile")
+
+console.log(nome("frase a cui verranno applicate le funzioni dell'altro file"))
+
+$//// NPM e' un runtime installato insieme a node che ci permette di importare librerie da esterno ///
+////sito web:    npmjs.com/////
+
+//// Con innerText e innerHTML inviamo all'id indicato una stringa o addirittura un pezzo di codice HTML ////
+$ HTML            <p id="risultato">(qui all'intero apparira' il codice mandato da JS)</p>
+$ JAVASCRIPT      document.getElementById("risultato").innerText = risultato 
+%%% In questo caso prendera' la stringa presente dentro la variabile risultato e la mandera' alla parte con id risultato dell'html %%%
+
+$ //// Con .value prendiamo la stringa inviata in input ////
+let variabile = document.getElementById("idVariabile").value %%% assegniamo a una variabile il valore inserito in input dall'utente %%%
