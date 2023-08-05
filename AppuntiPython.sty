@@ -1,0 +1,182 @@
+//////////////////// APPUNTI PYTHON ///////////////////////
+
+$///// PRINT E INPUT ////////
+
+ /// "input" viene utilizzato per consentire agli utenti di inserire appunto un input /// $ esempio: nome = input ("qual'e il tuo nome?")
+
+ //// "print" viene utilizzato per stampare a schermo un output /// $ esempio: print ("ciao" nome , " !! ")
+ con la , o con + concateniamo le stringhe , oppure per evitare il concatenamento inseriamo le variabili {}///// esempio: print(f"""ciao {nome} !!""")$
+//con l'aggiunta ad esempio di {:.2f} andiamo ad indicare che vogliamo avere un risultato che abbia 2 numeri float quindi decimali///
+
+
+ ///// OPERATORI LOGICI /////
+
+$ Gli operatori logici di python sono identici agli altri linguaggi: +, -, *, /, **, %
+
+
+
+///// VARIABILI /////
+
+$ //// per la dichiarazione di variabile in python non è necessario indicare il tipo di dato ////
+
+$ //// si dichiara semplicemente indicando il nome della variabile e il contenuto /// esempio: nome = 'Santo'
+
+$ //// Python è case-sensitive ////
+
+
+
+///// TIPOLOGIE PRINCIPALI DI DATI NUMERICI /////
+
+$ Principalmente esistono numeri interi int, decimali float e complessi complex(formati da una coppia di numeri una reale l'altra immaginaria)
+
+
+
+///// TIPOLOGIE DI DATI TEXT /////
+
+$ Le stringhe string possono essere dichiarate con leng (normale) , lower(in minuscolo), upper(in maiuscolo)
+$ inoltre con split divide la stringa in sottostringhe assegnandolo a un separatore specifico>//// esempio: output = testo.split(",") quindi dividerà il testo ogni volta che troverà una virgola
+$ con strip rimuove semplicemente gli spazi bianchi all'inizio e alla fine della string
+$ con replace sostituisce una sottostringa con un'altra /// esempio: output = testo.replace ("ciao" , "hello") e sostituirà ciao con hello
+
+///// TIPOLOGIE DATI BOOLEANI /////
+
+$ True o false indicano i classici operatori booleani presenti anche negli altri linguaggi
+$ esempio: vero = True ---- falso = False 
+
+
+///// OPERATORI DI CONFRONTO /////
+
+$ Ci restituiscono dei valori booleani dopo aver effettuato il confronto indicato 
+$ sono == (uguale a), != (diverso da), < > = (minore o maggiore), <= >= (minore o maggiore e uguale)
+
+
+///// OPERATORI BOOLEANI /////
+
+$ Vengono utilizzato per imporre una condizione all'interno di un ciclo o verifica 
+$ Sono AND, NOT e OR ---- esempio: print(c and b) --- cosi facendo andremo a controllare se sia la variabile c che b siano entrambi vere 
+
+
+///// LE LISTE /////
+
+$ Vengono utilizzate per raggrupare dei valori all'interno della stessa variabile (array in altri linguaggi)
+$ esempio: lista1 = [1, 2, 3, 4, 5] ----- print (lista1) ---- e l'output sarà 1,2,3,4,5
+$ inoltre se indichiamo oltre al nome anche la posizione ci estrarrà il valore che corrisponde a quella posizione
+$ esempio: print(lista1[0]) -- estrarrà solo il primo elemento della lista1
+$ invece con del lista1[0] -- eliminerà il primo elemento mantenendo gli altri elementi
+$ è possibile inoltre concatenare due liste con + --- ad esempio: lista3 = lista1 + lista2 --- e avremo come risultato le due liste concatenate nella lista 3
+
+
+///// LE TUPLE /////
+
+$ Sono esattamente come le liste solo che vengono dichiarate con () e non possono essere modificate dopo la creazione
+
+
+///// I DIZIONARI /////
+
+$ Attraverso i dizionari possiamo raggruppare gli elementi esattamente come la lista ma possiamo assegnare a ogni elemento un nuovo nome della variabile utile solo all'interno del dizionario
+$ esempio: dizionario1 = {"nome" : "Luca", "cognome": "Rossi", "età": 16 } --- print(dizionario1["nome"])
+$ ed è possibile modificare gli elementi del dizionario oltre a poterne aggiungere dei nuovi o eliminare
+
+
+///// FUNZIONI SULLE SEQUENZE /////
+
+$ Ci sono alcune funzioni che ci consentono di operare direttamente sugli elementi del nostro codice
+$ come len che ci indica la lunghezza di una determinata lista o tupla --- esempio: print(len(lista1))
+$ min e max che ci indicano i numeri piu grandi o piccoli
+$ sum che ci restituisce la somma
+$ sorted che ci ordina una lista/tupla/dizionario
+$ reversed che ci ordina al contrario gli elementi
+
+
+//// CONVERSIONI DI TIPO ////
+
+$ Serve a modificare la tipologia di dato di un elemento
+$ è sufficente inserire il tipo di dato che vogliamo ottenere e subito dopo l'elemento
+$ esempio: da un numero decimale a intero --- numero1 = int(3.14) ---- come output ci darà 3
+$ e questo è possibile con tutti i tipi di dato quindi da stringa a numero intero ecc...
+
+
+/////// FUNZIONI //////
+
+$ Definito come blocco di codice riutilizzabile 
+$ Viene dichiarato con: -- def nomefunzione(parametro): codice ----
+$ Per richiamare la funzione basterà scrivere il nome della funzione e passare uno o piu parametri
+$ Con return andiamo a restituire l'output della funzione
+
+
+////// CONDIZIONI //////
+
+$ IF, ELSE, ELIF sono le principali condizioni di python 
+$ Funzionano esattamente allo stesso modo degli altri linguaggi
+
+
+///// I CICLI /////
+
+$ WHILE e FOR, sono i principali cicli di python
+$  Funzionano esattamente allo stesso modo degli altri linguaggi --- esempio: while x < 10: codice
+$ FOR può esssere for each o for range
+$ con for each diciamo al programma, esegui il ciclo "per ogni valore" presente nella lista
+$ con for range diciamo al programma di eseguire il ciclo specificando il numero di partenza, fino a dove contare e specificare in modo facoltativo il numero di step da fare
+
+
+///// CONTROLLO DEI CICLI //////
+
+$ BREAK, CONTINUE e PASS vengono utilizzate per gestire i cicli in python
+$ Con BREAK possiamo interrompere un ciclo indicandone il punto, ad esempio --- if x=5: break --- in questo caso eseguirà un ciclo e si fermerà non appena la variabile avrà 5 come valore
+$ Con CONTINUE invece ci permette di saltare un pezzo di codice quando ci troviamo di fronte a un determinato valore esempio: --- if x=5: continue --- eseguira il ciclo per tutti i valori tranne che per il 5
+$ Con PASS puo anche essere utilizzato per le funzioni e indica al programma di scartare completamente una parte di codice, magari perche ancora il codice è da ultimare.
+
+
+///// LIBRERIE /////
+
+$ Le librerie ci consentono di prendere funzionalità, pezzi di codice e molto altro scritto da altre persone e utilizzarlo per i nostri progetti
+$ per installare una libreria si utilizza il PIP di python --- esempio: !pip install nomelibreria --- %il punto esclamativo presente prima di pip viene utilizzato solo su google colab
+$ Si utilizza la keyword IMPORT per importare la libreria all'interno del progetto
+$ Con la libreria IPython (solo per google colab) possiamo vedere dei contenuti multimediali direttamente da google colab 
+ % PARTE DA APPROFONDIRE, POCO CHIARA SU LEARNN %
+
+
+ ///// ECCEZIONI /////
+
+ $ Possono esserci situazioni che causano problemi non legati al codice ma bensi alla struttura generale su cui ci basiamo e che possiamo risolvere attraverso le eccezioni
+ $ Un esempio potrebbe essere un tipo di dato non previsto, o una pagina momentaneamente non disponbile
+ $ TRY, EXCEPT e FINALLY sono le principali eccezioni di python 
+ $ Con TRY indichiamo al compilatore di provare a svolgere un comando, per esempio chiedere all'utente di inserire un numero intero --- try: num = int(input("insersci un numero intero"))
+ $ TRY è accompagnato da EXCEPT che ci indica nel caso in cui il TRY non venga rispettato che tipo di errore far visualizzare a schermo --- except ValueError: print("Errore: devi inserire un numero: ")
+ $ FINALLY verrà invece eseguito sempree --- finally: print(" io ci sono sempre, ciauu ")
+
+
+ ///// FUNZIONI ANONIME LAMBDA /////
+
+ $ Ci permettono di eseguire delle funzioni senza dover per forza nominare ogni funzione 
+ $ Hanno la stessa utilità delle funzioni ma viene utilizzata maggiormente nelle liste, magari nelle funzioni che vanno utilizzate pochissime volte
+ $ Per utilizzarli si utilizza la keyword LAMBDA con l'input e quello che deve eseguire
+ $ esempio: --- raddoppia = lambda x: x * 2 ---- e per usare la funzione --- print (raddoppia(3))
+ $ esempio su lista --- numpari = filter(lambda x: x % 2 == 0, nomeLista) --- in questo modo filtrerà solo i numeri pari
+
+
+ //// LIST E DICT COMPREHENSION ////
+
+ $ Vengono utilizzate per creare delle liste/dei cicli in modo piu veloce 
+ $ Quindi potremmo generare una lista inserendo magari anche delle condizioni senza dover per forza dichiararla normalmente
+ $ Esempio: --- ListaNumeri = [x for x in range (1,21) if x >= 5] e ci genererà una lista chiamata ListaNumeri che parte da 6 fino ad arrivare a 20
+ $ Oppure possiamo applicare delle modifiche all'intera lista con un singolo comando
+ $ Esempio: --- ListaNumeri = [ x+1 for in range (1,21)] --- in modo da generare una lista sempre che va da 1 a 20  ma lavorando sui valori prodotti inserendo +1 ogni volta
+ $ Nel caso di operazioni su dizionari funziona allo stesso modo ma bisogna utilizzare le parendesi graffe {}
+
+
+ //// CLASSI E OGGETTI ////
+
+ $ Le classi e oggetti in python sono esattamente come negli altri linguaggi di programmazione
+ $ La classe viene dichiarata con CLASS, con __init__ andiamo a inizializzare la classe andando a indicare cosa vogliamo all'interno della classe (attributi)
+ $ esempio: --- class giocattolo: def __init__(self, nome, colore, forma): self.nome=nome self.colore=colore self.forma=forma
+ $ SELF indica l'istanza a se stesso, ed e obbligatorio inserirlo in ogni iniziazione di una classe
+ $ Per creare degli oggetti, dopo aver inizializzato la classe andiamo a dichiarare normalmente delle variabili ma andando come a chiamare una funzione (vedi esempio)
+ $ Esempio: --- palla = Giocattolo("palla","rosso","sferica") --- che vanno a indicare in questo modo la classe inanzitutto, e poi i relativi attributi, quindi nome colore e forma
+ 
+////// INIZIALIZZAZIONE STRUTTURA CODICE //////
+
+$ Generalmente il codice viene inizializzato con: --- if __name__ == "__main__": main()
+
+
+CODICE CORSO UTILIZZATO : https://colab.research.google.com/gist/dotto95/41d4bb321d4de9327552b317afe7fbe8/leann_corso_python_2023.ipynb
